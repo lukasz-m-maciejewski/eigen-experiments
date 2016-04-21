@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <Eigen/Dense>
+#include <Eigen/Dense>
 
 #include "Z.hpp"
 
@@ -34,4 +34,14 @@ int main()
     std::cout << "Z<2>: " << x * y << "\n";
 
     std::cout << "Z<2>: " << x / y << "\n";
+
+    Matrix<Z<3>> m(1, 2);
+    Matrix<Z<3>> n(2, 1);
+    m(0, 0) = 1;
+    m(0, 1) = 2;
+
+    n(0, 0) = 0;
+    n(1, 0) = 2;
+
+    std::cout << m * n << "\n";
 }
